@@ -1,19 +1,55 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
-@plugin '@tailwindcss/typography';
-@plugin '@tailwindcss/forms';
+@import "tailwindcss";
 @import "tailwindcss-animated";
 @import "tailwindcss-intersect";
+
+@theme {
+  --font-header: "Cirka", sans-serif;
+  --font-body: "NeueMontreal", sans-serif;
+  --font-subheader: "Caveat", cursive;
+}
 
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, forest;
 }
 
-@theme {
-  /* Her tilføjes theme variable // tokens */
-}
+@plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/forms';
 
 @layer base {
+  @font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Cirka";
+    src: url("/fonts/Cirka-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Cirka";
+    src: url("/fonts/Cirka-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
   *,
   ::after,
   ::before,
