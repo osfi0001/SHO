@@ -1,11 +1,33 @@
+---
+import PaperCard from './PaperCard.astro';
+---
 <div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img
-      src="/public/paper-card.svg"
-      class="w-full" />
-    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-      <a href="#slide4" class="btn btn-circle">❮</a>
-      <a href="#slide2" class="btn btn-circle">❯</a>
+    <div id="slide1" class="carousel-item relative w-full flex items-center justify-center">
+        <div class="rotate-1"><PaperCard/></div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4"><img src="public/arrow.svg" alt="Previous" class="rotate-180 w-4 md:w-8"></a>
+            <a href="#slide2"><img src="public/arrow.svg" alt="Next" class="w-4 md:w-8"></a>
+        </div>
     </div>
-  </div>
- 
+    <div id="slide2" class="carousel-item relative w-full flex items-center justify-center">
+        <div class="-rotate-1"><PaperCard/></div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1"><img src="public/arrow.svg" alt="Previous" class="rotate-180 w-4 md:w-8"></a>
+            <a href="#slide3"><img src="public/arrow.svg" alt="Next" class="w-4 md:w-8"></a>
+        </div>
+    </div>
+    <div id="slide3" class="carousel-item relative w-full flex items-center justify-center">
+        <div class="-rotate-1.5"><PaperCard/></div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide2"><img src="public/arrow.svg" alt="Previous" class="rotate-180 w-4 md:w-8"></a>
+            <a href="#slide4"><img src="public/arrow.svg" alt="Next" class="w-4 md:w-8"></a>
+        </div>
+    </div>
+    <div id="slide4" class="carousel-item relative w-full flex items-center justify-center">
+        <div class="rotate-1"><PaperCard/></div>
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide3"><img src="public/arrow.svg" alt="Previous" class="rotate-180 w-4 md:w-8"></a>
+            <a href="#slide1"><img src="public/arrow.svg" alt="Next" class="w-4 md:w-8"></a>
+        </div>
+    </div>
+</div>

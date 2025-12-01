@@ -2,7 +2,7 @@
 import Button from "./Button.astro"
 ---
 
-<section class="relative inline-block w-[350px] h-[700px] m-5">
+<section class="relative inline-block w-[250px] h-[550px] md:w-[400px] md:h-[700px] m-5">
     <!-- Card BG -->
     <div>
         <img class="absolute inset-0 w-full h-full object-cover" src="public/paper-card.svg" alt="Paper Card Image">
@@ -13,12 +13,12 @@ import Button from "./Button.astro"
     <!-- Card Contents -->
     <div class="absolute inset-0 flex flex-col justify-start pt-16 px-5 pb-5">
         <div class="flex justify-center mb-4">
-            <img class="w-[300px] h-[300px] object-cover" src="public/placeholder.jpg" alt="Placeholder Image">
+            <img class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-cover" src="public/placeholder.jpg" alt="Placeholder Image">
         </div>
-        <div class="flex-1 overflow-hidden">
-            <h2 class="font-subheader text-black text-[24px]">13. December</h2>
-            <h1 class="font-body font-bold text-black text-[40px]">EVENT AT SHO</h1>
-            <p class="font-body text-black text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor nibh at nulla ultricies, nec condimentum lorem accumsan. Sed risus augue, consectetur eget justo vitae, suscipit euismod turpis</p>
+        <div class="flex-1 overflow-hidden ">
+            <h2 class="font-subheader text-black md:text-[16px]">13. December</h2> 
+            <h1 class="font-body font-bold text-black text-[24px] md:text-[40px]">EVENT AT SHO</h1>
+            <p class="font-body text-black text-[12px] md:text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor nibh at nulla ultricies, nec condimentum lorem accumsan. Sed risus augue, consectetur eget justo vitae, suscipit euismod turpis</p>
             <div class="pt-4 pb-4 flex justify-center">
                 <Button/>
             </div>
