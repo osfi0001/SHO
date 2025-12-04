@@ -8,6 +8,8 @@
   --font-header: "Cirka", sans-serif;
   --font-body: "NeueMontreal", sans-serif;
   --font-subheader: "Caveat", cursive;
+
+  --color-bg: #fffcf8;
 }
 
 @plugin "daisyui" {

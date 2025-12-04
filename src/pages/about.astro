@@ -1,0 +1,15 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Employees from '../components/Employees.astro';
+import Om from '../components/Om.astro';
+import FAQ from '../components/FAQ.astro';
+---
+
+<MainLayout title="Titel">
+    <article class="bg-bg text-black">
+        <Om></Om>
+<hr class="border-black my-20 mx-8 md:mx-20">
+        <Employees></Employees>
+        <hr class="border-black my-20 mx-8 md:mx-20">
+        <FAQ></FAQ>
+    </article>

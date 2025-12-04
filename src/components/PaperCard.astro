@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro"
+const { src, date, event, desc} = Astro.props;
 ---
 
 <section class="relative inline-block w-[250px] h-[550px] md:w-[400px] md:h-[700px] m-5">
@@ -13,14 +14,15 @@ import Button from "./Button.astro"
     <!-- Card Contents -->
     <div class="absolute inset-0 flex flex-col justify-start pt-16 px-5 pb-5">
         <div class="flex justify-center mb-4">
-            <img class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-cover" src="public/placeholder.jpg" alt="Placeholder Image">
+            <img class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-cover" src={src} alt="Placeholder Image">
         </div>
         <div class="flex-1 overflow-hidden ">
-            <h2 class="font-subheader text-black md:text-[16px]">13. December</h2> 
-            <h1 class="font-body font-bold text-black text-[24px] md:text-[40px]">EVENT AT SHO</h1>
-            <p class="font-body text-black text-[12px] md:text-[16px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor nibh at nulla ultricies, nec condimentum lorem accumsan. Sed risus augue, consectetur eget justo vitae, suscipit euismod turpis</p>
+            <h2 class="font-subheader text-black md:text-[16px]">{date}</h2> 
+            <h1 class="font-body font-bold text-black text-[24px] md:text-[40px]">{event}</h1>
+            <p class="font-body text-black text-[12px] md:text-[16px]">{desc}</p>
             <div class="pt-4 pb-4 flex justify-center">
-                <Button/>
+                <Button/
+                title="Læs">
             </div>
         </div>
     </div>
