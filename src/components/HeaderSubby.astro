@@ -1,0 +1,46 @@
+---
+const { src } = Astro.props;
+---
+
+<!-- Background image wrapper -->
+<section
+  class="relative w-full h-[150px] bg-bg bg-[url('/header2.svg')] bg-left bg-cover bg-no-repeat">
+
+  <!-- Content on top of background -->
+  <div
+    class="absolute inset-0 flex items-center justify-between px-6 z-10">
+
+    <!-- Left: Your future logo -->
+    <div class="flex items-center">
+      <!-- example placeholder -->
+      <img src=/sho_logo_black.svg alt="Logo" class="h-14" />
+    </div>
+
+    <!-- Right: burger + dropdown -->
+    <div class="relative group">
+
+      <label class="swap swap-rotate cursor-pointer">
+
+        <!-- Checkbox required for DaisyUI swap -->
+        <input type="checkbox" class="sr-only" />
+
+        <!-- Hamburger icon -->
+        <img src="/open.svg" alt="Open menu" class="swap-off w-8 h-8" />
+
+        <!-- Close icon -->
+        <img src="/close.svg" alt="Close menu" class="swap-on w-8 h-8" />
+      </label>
+
+      <!-- Dropdown -->
+      <ul
+        class="menu absolute right-0 mt-3 w-48 rounded-box bg-base-100 shadow-lg z-50
+               hidden group-has-[:checked]:flex flex-col">
+        <li><a>Home</a></li>
+        <li><a>Services</a></li>
+        <li><a>About</a></li>
+        <li><a>Contact</a></li>
+      </ul>
+
+    </div>
+  </div>
+</section>
