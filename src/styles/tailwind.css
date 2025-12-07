@@ -10,6 +10,7 @@
   --font-subheader: "Caveat", cursive;
 
   --color-bg: #fffcf8;
+  --color-text: #0e0e0e;
 }
 
 @plugin "daisyui" {
@@ -64,4 +65,8 @@
 @layer components {
 }
 @layer utilities {
+}
+
+@utility max-ch-75 {
+  max-width: 75ch;
 }
