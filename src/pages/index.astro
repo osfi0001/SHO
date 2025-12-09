@@ -8,7 +8,90 @@ import Carousel from '../components/Carousel.astro';
 import Employees from "../components/Employees.astro";
 ---
 <MainLayout title="Titel">
-	<article class="bg-bg">
-		a
-	</article>
+	<div class="relative h-screen w-full flex items-center justify-center">
+		<!-- Background image -->
+		<img 
+			src="placeholder.jpg" 
+			alt="" 
+			class="absolute inset-0 w-full h-full object-cover"
+		>
+		
+		<!-- Centered hero logo -->
+		<img 
+			src="/sho_hero.svg" 
+			alt=""
+			class="relative z-10 opacity-80 w-80 md:w-100 lg:w-150 object-contain"
+		>
+	
+		<!-- Arrow under the logo -->
+		<img 
+			src="/arrowindex.svg" 
+			alt=""
+			class="absolute bottom-28 md:bottom-32 z-20 w-8 opacity-80"
+		>
+	
+		<!-- Button -->
+		<div class="absolute bottom-10 z-20">
+			<Button title="SE EVENTS"></Button>
+		</div>
+	
+		<!-- Torn paper bottom overlay -->
+		<img 
+			src="/indexpaper.svg" 
+			class="absolute bottom-0 left-0 w-full object-cover z-30 pointer-events-none"
+		>
+	</div>
+	
+	
+	
+
+<!-- EVERYTHING UNDER THE HERO -->
+
+	<div class="text-(--color-text) bg-(--color-bg) py-16">
+		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardeventsindex.png')] rounded-3xl mb-16 drop-shadow-lg">
+			<div class="p-8">
+				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus for alle Odense studerende</p>
+				<div class="lg:grid grid-cols-2 gap-10">
+					<div class="">
+						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har  mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille  brætspil med dine venner, afholde møder eller gå i byen.</p>
+						<Button title="SE EVENTS" href="/events"></Button>
+					</div>
+					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
+						<img class="w-full h-full object-cover" src="placeholder.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardfrivilligindex.png')] rounded-3xl drop-shadow-lg">
+			<div class="p-8">
+				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus drevet af frivillighed</p>
+				<div class="lg:grid grid-cols-2 gap-10">
+					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
+						<img class="w-full h-full object-cover" src="placeholder.jpg" alt="">
+					</div>
+					<div class="">
+						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har  mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille  brætspil med dine venner, afholde møder eller gå i byen.</p>
+						<Button title="BLIV FRIVILLIG" href="/events"></Button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="border-black my-20 mx-8 md:mx-20">
+		<div>
+			<h2 class="font-bold font-header text-mb-header text-center lg:text-header pb-4">SENESTE NYT</h2>
+			<p class="font-body text-mb-body text-center lg:text-body">Herunder ser du de sidste nyheder fra Studenterhus Odense.</p>
+		</div>
+		<div class="flex justify-center">
+			<div class="grid grid-cols-4 gap-10 m-20">
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_1.png" alt="post 1"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_2.png" alt="post 2"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_3.png" alt="post 3"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_4.png" alt="post 4"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_5.png" alt="post 5"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_6.png" alt="post 6"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_7.png" alt="post 7"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_8.png" alt="post 8"></a>
+			</div>
+		</div>
+	</div>
 </MainLayout>

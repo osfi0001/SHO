@@ -45,6 +45,10 @@
 @plugin '@tailwindcss/forms';
 
 @layer base {
+  body {
+    @apply bg-bg;
+  }
+
   @font-face {
     font-family: "NeueMontreal";
     src: url("/fonts/NeueMontreal-Regular.woff2") format("woff2");
