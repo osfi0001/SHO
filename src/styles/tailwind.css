@@ -18,19 +18,23 @@
 
   /*DESKTOP FONT SIZES*/
 
-  --text-body: 16px 1.3;
+  --text-body: 16px;
   --text-header: 48px;
   --text-subheader1: 36px;
   --text-subheader2: 32px;
-  --text-form: 64px 0.8;
+  --text-form: 64px;
 
   /*MOBILE FONT SIZES*/
 
-  --text-mb-body: 12px 1.3;
+  --text-mb-body: 12px/1.3;
   --text-mb-header: 32px;
   --text-mb-subheader1: 24px;
   --text-mb-subheader2: 24px;
   --text-mb-form: 40px;
+
+  /*LINE HEIGHTS*/
+  --leading-form: 0.8;
+  --leading-body: 1.3;
 }
 
 @plugin "daisyui" {
