@@ -3,27 +3,50 @@ import Button from "./Button.astro"
 const { src, date, event, desc} = Astro.props;
 ---
 
-<section class="relative inline-block w-[250px] h-[550px] md:w-[400px] md:h-[700px] m-5">
+<section class="relative inline-block w-[250px] h-auto md:w-[700px] m-5">
+
     <!-- Card BG -->
-    <div>
-        <img class="absolute inset-0 w-full h-full object-cover drop-shadow-lg" src="public/paper-card.svg" alt="Paper Card Image">
-    </div>
-    <div>
-        <img class="absolute top-0 left-1/2 transform -translate-x-1/2" src="public/tape.svg" alt="tape">
-    </div>
-    <!-- Card Contents -->
-    <div class="absolute inset-0 flex flex-col justify-start pt-16 px-5 pb-5">
-        <div class="flex justify-center mb-4">
-            <img class="w-[200px] h-[200px] md:w-[300px] md:h-[300px] object-cover" src={src} alt="Placeholder Image">
+    <img
+        class="absolute inset-0 w-full h-full object-cover drop-shadow-lg pointer-events-none"
+        src="/paper-card.svg"
+        alt="Paper Card Image"
+    />
+
+    <!-- Tape -->
+    <img
+        class="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        src="/tape.svg"
+        alt="tape"
+    />
+
+    <!-- Card Content -->
+    <div class="relative flex flex-col md:grid md:grid-cols-2 gap-4 pt-16 px-5 pb-16">
+
+        <!-- Image -->
+        <div class="flex justify-center">
+            <img
+                class="w-[180px] h-[180px] md:w-[260px] md:h-[260px] object-cover rounded-md"
+                src={src}
+                alt=""
+            />
         </div>
-        <div class="flex-1 overflow-hidden ">
-            <h2 class="font-subheader text-black md:text-[16px]">{date}</h2> 
-            <h1 class="font-body font-bold text-black text-[24px] md:text-[40px]">{event}</h1>
-            <p class="font-body text-black text-[12px] md:text-[16px]">{desc}</p>
-            <div class="pt-4 pb-4 flex justify-center">
-                <Button/
-                title="Læs">
+
+        <!-- Text -->
+        <div class="flex flex-col min-w-0">
+            <h2 class="font-subheader text-black text-sm md:text-base truncate">{date}</h2>
+
+            <h1 class="font-body font-bold text-black text-2xl md:text-4xl leading-tight break-words">
+                {event}
+            </h1>
+
+            <p class="font-body text-black text-xs md:text-base mt-2 leading-snug break-words">
+                {desc}
+            </p>
+
+            <div class="pt-4 flex justify-center md:justify-start">
+                <Button title="Læs" />
             </div>
         </div>
+
     </div>
 </section>
