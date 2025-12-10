@@ -4,10 +4,11 @@ const { src } = Astro.props;
 
 <!-- STICKY HEADER -->
 <section
+   style={`background-image: url('${src}');`}
   class="
     fixed top-0 left-0 w-full z-[100]
     h-[150px]
-    bg-[url('/header2.svg')] bg-left bg-cover bg-no-repeat
+    bg-left bg-cover bg-no-repeat
   "
 >
 
