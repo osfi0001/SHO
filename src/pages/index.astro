@@ -8,12 +8,12 @@ import Carousel from '../components/Carousel.astro';
 import Employees from "../components/Employees.astro";
 ---
 <MainLayout title="Titel">
-	<div class="relative h-screen w-full flex items-center justify-center">
+	<div class="relative h-[110vh] w-full flex items-center justify-center">
 		<!-- Background image -->
 		<img 
 			src="placeholder.jpg" 
 			alt="" 
-			class="absolute inset-0 w-full h-full object-cover"
+			class="absolute inset-0 w-full h-[110vh] object-cover"
 		>
 		
 		<!-- Centered hero logo -->
@@ -30,8 +30,8 @@ import Employees from "../components/Employees.astro";
 	
 		<!-- Torn paper bottom overlay -->
 		<img 
-			src="/indexpaper.svg" 
-			class="absolute bottom-0 left-0 w-full object-cover z-30 pointer-events-none"
+			src="/footerpaper-cropped.svg" 
+			class="absolute bottom-[-25px] left-0 w-full object-cover z-30 pointer-events-none rotate-180"
 		>
 	</div>
 	
@@ -40,7 +40,8 @@ import Employees from "../components/Employees.astro";
 
 <!-- EVERYTHING UNDER THE HERO -->
 
-	<div class="text-(--color-text) bg-(--color-bg) py-16">
+	<div class="relative text-(--color-text) bg-(--color-bg) py-16">
+		<img class="absolute hidden lg:block left-2 top-50" src="/notebook-sketch.svg" alt="">
 		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardeventsindex.png')] rounded-3xl mb-16 drop-shadow-lg">
 			<div class="p-8">
 				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus for alle Odense studerende</p>
@@ -75,15 +76,15 @@ import Employees from "../components/Employees.astro";
 			<p class="font-body text-mb-body text-center lg:text-body">Herunder ser du de sidste nyheder fra Studenterhus Odense.</p>
 		</div>
 		<div class="flex justify-center">
-			<div class="grid grid-cols-4 gap-10 m-20">
+			<div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-10 m-20">
 				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_1.png" alt="post 1"></a>
 				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_2.png" alt="post 2"></a>
 				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_3.png" alt="post 3"></a>
 				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_4.png" alt="post 4"></a>
-				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_5.png" alt="post 5"></a>
-				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_6.png" alt="post 6"></a>
-				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_7.png" alt="post 7"></a>
-				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_8.png" alt="post 8"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_5.png" alt="post 5"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_6.png" alt="post 6"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_7.png" alt="post 7"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_8.png" alt="post 8"></a>
 			</div>
 		</div>
 	</div>
