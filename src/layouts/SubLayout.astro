@@ -3,7 +3,8 @@ import HeaderSubby from "../components/HeaderSubby.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 import HeaderSub from "../components/HeaderSub.astro";
-const { title } = Astro.props;
+const { title, headerBG} = Astro.props;
+
 ---
 <html lang="en">
 	<head>
@@ -17,7 +18,7 @@ const { title } = Astro.props;
 	<body>
 
 		<header>
-			<HeaderSubby></HeaderSubby>
+			<HeaderSubby src={headerBG}></HeaderSubby>
 		</header>
 		
 		<main>
