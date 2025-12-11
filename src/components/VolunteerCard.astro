@@ -1,0 +1,25 @@
+---
+const { src, header, desc } = Astro.props;
+---
+<section class="relative inline-block w-[300px] h-[300px] md:w-[350px] md:h-[400px] m-5">
+    <!-- Card BG -->
+    <div>
+        <img class="absolute inset-0 w-full h-full object-cover drop-shadow-lg" src="public/paper-card.svg" alt="Paper Card Image">
+    </div>
+    <div>
+        <img class="absolute -top-8 left-1/2 transform -translate-x-1/2" src="public/tape.svg" alt="tape">
+    </div>
+    <!-- Card Contents -->
+    <div class="absolute inset-0 flex flex-col justify-start pt-7 px-5">
+        <div class="flex justify-center">
+            <img class="w-[50px] h-[50px]" src={src} alt="Placeholder Image">
+        </div>
+        <div class="flex-1 overflow-hidden">
+            <h2 class="text-center font-subheader font-bold text-text text-mb-subheader2 md:text-subheader2">{header}</h2> 
+            <p class="font-body text-black text-mb-body md:text-body">{desc}</p>
+            <div class="pt-4 pb-4 flex justify-center">
+
+            </div>
+        </div>
+    </div>
+</section>

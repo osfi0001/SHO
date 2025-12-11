@@ -19,15 +19,20 @@ import Employees from "../components/Employees.astro";
 		<!-- Centered hero logo -->
 		<img 
 			src="/sho_hero.svg" 
-			alt=""
+			alt="logo"
 			class="relative opacity-80 w-80 md:w-100 lg:w-130 object-contain"
+			id="layer"
+			data-speed="1"
 		>
 	
 		<!-- Button -->
-		<div class="absolute bottom-35 md:bottom-30 lg:bottom-20 z-20">
-			<Button href="/events" title="SE EVENTS"></Button>
+		<div class="absolute bottom-5 right-10 md:right-50 md:top-75 md:bottom-30 lg:bottom-20 z-20" id="layer" data-speed="3">
+			<Button href="/volunteer" title="BLIV FRIVILLIG"></Button>
 		</div>
 	
+			<div class="absolute bottom-5 left-10 md:left-50 md:top-75 md:bottom-30 lg:bottom-20 z-20" id="layer" data-speed="3">
+			<Button href="/events" title="SE EVENTS"></Button>
+		</div>
 		<!-- Torn paper bottom overlay -->
 		<img 
 			src="/footerpaper-cropped.svg" 
@@ -41,7 +46,8 @@ import Employees from "../components/Employees.astro";
 <!-- EVERYTHING UNDER THE HERO -->
 
 	<div class="relative text-(--color-text) bg-(--color-bg) py-16">
-		<img class="absolute hidden lg:block left-2 top-50" src="/notebook-sketch.svg" alt="">
+		<img class="absolute hidden lg:block left-1.5 top-50 sketch" src="/notebook-sketch.svg" alt="sketch">
+		<img class="absolute hidden lg:block right-30 top-10 rotate-4 sketch" src="/beer-sketch.svg" alt="sketch">
 		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardeventsindex.png')] rounded-3xl mb-16 drop-shadow-lg">
 			<div class="p-8">
 				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus for alle Odense studerende</p>
@@ -89,3 +95,34 @@ import Employees from "../components/Employees.astro";
 		</div>
 	</div>
 </MainLayout>
+
+
+    <script>
+        document.addEventListener("mousemove", parallax);
+        window.addEventListener("scroll", parallaxScroll);
+
+        function parallax(e) {
+            document.querySelectorAll("#layer").forEach(layer => {
+                const speed = Number(layer.getAttribute("data-speed")); // Convert to number
+
+                if (!isNaN(speed)) { // Ensure speed is a valid number
+                    const x = (window.innerWidth / 2 - e.clientX * speed) / 100;
+                    const y = (window.innerHeight / 2 - e.clientY * speed) / 100;
+
+                    (layer as HTMLElement).style.transform = `translateX(${x}px) translateY(${y}px)`;
+                }
+            });
+        }
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.25;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+    
+</script>
