@@ -10,11 +10,9 @@ import Employees from "../components/Employees.astro";
 <SubLayout title="Studenterhus Odense" headerBG="/header_index.svg">
 	<div class="relative h-screen w-full flex items-center justify-center">
 		<!-- Background image -->
-		<img 
-			src="placeholder.jpg" 
-			alt="" 
-			class="absolute inset-0 w-full h-[110vh] object-cover"
-		>
+		<video muted autoplay loop playsinline disablepictureinpicture class="absolute inset-0 w-full h-[100vh] object-cover">
+			<source src="/herovideo.webm" type="video/webm">
+		</video>
 		
 		<!-- Centered hero logo -->
 		<img 
@@ -36,7 +34,7 @@ import Employees from "../components/Employees.astro";
 		<!-- Torn paper bottom overlay -->
 		<img 
 			src="/footerpaper-cropped.svg" 
-			class="absolute bottom-[-25px] left-0 w-full object-cover z-30 pointer-events-none rotate-180"
+			class="absolute bottom-[-5px] left-0 w-full object-cover z-30 pointer-events-none rotate-180"
 		>
 	</div>
 	
@@ -57,7 +55,7 @@ import Employees from "../components/Employees.astro";
 						<Button title="SE EVENTS" href="/events"></Button>
 					</div>
 					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
-						<img class="w-full h-full object-cover" src="placeholder.jpg" alt="">
+						<img class="w-full h-full object-cover" src="indeximg1.webp" alt="">
 					</div>
 				</div>
 			</div>
@@ -67,7 +65,7 @@ import Employees from "../components/Employees.astro";
 				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus drevet af frivillighed</p>
 				<div class="lg:grid grid-cols-2 gap-10">
 					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
-						<img class="w-full h-full object-cover" src="placeholder.jpg" alt="">
+						<img class="w-full h-full object-cover" src="indeximg2.webp" alt="">
 					</div>
 					<div class="">
 						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har  mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille  brætspil med dine venner, afholde møder eller gå i byen.</p>
