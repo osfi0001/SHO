@@ -7,8 +7,8 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Carousel from '../components/Carousel.astro';
 import Employees from "../components/Employees.astro";
 ---
-<SubLayout title="Studenterhus Odense" headerBG="/header_index.svg">
-	<div class="relative h-screen w-full flex items-center justify-center">
+<SubLayout title="Studenterhus Odense" headerBG="/header_index.svg" footerBG="/BG12.png">
+	<div id="hero" class="relative h-screen w-full flex items-center justify-center">
 		<!-- Background image -->
 		<video muted autoplay loop playsinline disablepictureinpicture class="absolute inset-0 w-full h-[100vh] object-cover">
 			<source src="/herovideo.webm" type="video/webm">
@@ -20,7 +20,7 @@ import Employees from "../components/Employees.astro";
 			alt="logo"
 			class="relative opacity-80 w-80 md:w-100 lg:w-130 object-contain"
 			id="layer"
-			data-speed="1"
+			data-speed="2"
 		>
 	
 		<!-- Button -->

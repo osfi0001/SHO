@@ -4,7 +4,7 @@ import VolunteerCard from "../components/VolunteerCard.astro";
 import FormIntern from "../components/FormIntern.astro";
 ---
 
-<SubLayout title="Bliv Praktikant" headerBG="/header1.svg">
+<SubLayout title="Bliv Praktikant" headerBG="/headerintern.svg" footerBG="/BG24.png">
     
 <div class="pt-25">
 <FormIntern></FormIntern>
@@ -23,4 +23,50 @@ import FormIntern from "../components/FormIntern.astro";
     </div>
 </div>
 
+
+<div>
+    <div class="flex flex-wrap justify-center mx-10 gap-5 my-8">
+    <div>
+
+        <VolunteerCard
+        header="Vi Søger"
+        desc="Vi søger løbende praktikanter, der kan arbejde fleksibelt og selvstændigt med de stillede opgaver, som bl.a. bliver:"    
+        list={[
+        "Planlægning og afvikling af events i Studenterhuset",
+        "Bar- og eventafvikling af eventuelle eksterne events",
+        "Afvikling af festivaler; Generator, Spoken Word, osv",
+        "Studiestartsmessen",
+        "Caféafvikling, herunder salg, mersalg og servicering af gæster",
+        "Markedsføring og branding, herunder SoMe",
+        "Frivilligledelse",
+        "Evt. grafiske opgaver til vores sociale og fysiske platforme",
+        "Evt. analyseopgaver, f.eks. gæsteprofiler, markedsanalyser, tilfredshedsundersøgelser",
+        "Ad hoc opgaver efter behov"
+       ]}>
+    </VolunteerCard>
+    </div>
+    <div>
+        <VolunteerCard
+        header="Vi Forventer"
+        list={[
+            "At du som person er udadvendt, handlingsorienteret, god til at samarbejde og arbejde selvstændigt og i godt humør.",
+            "At du er ansvarsfuld og initiativrig, selv er opsøgende i forhold til arbejdsopgaver og har mod på at kaste dig ud i forskelligartede opgaver.",
+            "At du prioriterer praktikarbejdet og er fleksibel med arbejdstidspunkter.",
+            "At du taler/skriver flydende engelsk, da det er en del af hverdagen på Studenterhuset.",
+            "Har du erfaring med foreningsarbejde og frivillige, er det et plus."
+            ]}
+></VolunteerCard>        
+    </div>
+    <div>
+        <VolunteerCard
+        header="Vi Tilbyder"
+        list={[
+            "At du bliver en del af en sjov og spændende arbejdsplads med højt til loftet, hvor vi kan tilpasse praktikopholdets arbejdsopgaver til dine interesser og kompetencer.",
+            "At du får mulighed for at prøve kræfter med mange forskelligartede opgaver efter interesseområde.",
+            "At du får mulighed for at bidrage til at gøre Odense til Danmarks bedste studieby."
+            ]}>
+
+        </VolunteerCard>
+    </div>
+</div>
 </SubLayout>
