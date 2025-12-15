@@ -23,6 +23,7 @@
   --text-subheader1: 36px;
   --text-subheader2: 32px;
   --text-form: 64px;
+  --text-footer: 20px;
 
   /*MOBILE FONT SIZES*/
 
@@ -87,6 +88,10 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  .invert {
+    filter: invert(1);
   }
 }
 
