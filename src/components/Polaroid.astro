@@ -1,8 +1,8 @@
 ---
-const { src,  name, mail, desc} = Astro.props;
+const { src,  name, mail, desc, link} = Astro.props;
 ---
-<section class="inline-block w-[275px] h-[400px] md:w-[300px] md:h-[450px] m-5 relative bg-white">
-    <div class="hover:bg-gradient-to-r hover:from-orange-500 hover:to-blue-500 hover:p-1 hover:scale-105 transition-all duration-300">
+<a href={link}><section class="polaroid cursor-pointer inline-block w-[275px] h-[400px] md:w-[300px] md:h-[450px] m-5 relative bg-white">
+    <div class="hover:scale-105hover:p-1 hover:scale-105 transition-all duration-300">
          <div class="bg-white">
         <img class="inset-0 w-full h-full object-cover drop-shadow-lg" src="public/polaroid2.svg" alt="Paper Card Image">
     </div>
@@ -17,9 +17,12 @@ const { src,  name, mail, desc} = Astro.props;
             </div>
             <div class="text-black">
                 <h2 class="font-subheader text-[20px]">{name}</h2>
-                <p class="font-body">{mail}</p>
-                <p class="font-body">{desc}</p>
+                <p class="font-body text-mb-body">{mail}</p>
+                <p class="font-body md:text-body text-mb-body">{desc}</p>
             </div>
         </div>
     </div>
 </section>
+</a>
+
+

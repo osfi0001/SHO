@@ -89,10 +89,6 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-
-  .invert {
-    filter: invert(1);
-  }
 }
 
 @layer components {
