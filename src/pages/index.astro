@@ -6,8 +6,10 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import Carousel from '../components/Carousel.astro';
 import Employees from "../components/Employees.astro";
+import Sticker from "../components/Sticker.astro";
 ---
 <SubLayout title="Studenterhus Odense" headerBG="/header_index.svg" footerBG="/BG12.png">
+	<Sticker></Sticker>
 	<div id="hero" class="relative h-screen w-full flex items-center justify-center">
 		<!-- Background image -->
 		<video muted autoplay loop playsinline disablepictureinpicture class="absolute inset-0 w-full h-[100vh] object-cover">
@@ -48,10 +50,10 @@ import Employees from "../components/Employees.astro";
 		<img class="absolute hidden lg:block right-30 top-10 rotate-4 sketch" src="/beer-sketch.svg" alt="sketch">
 		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardeventsindex.png')] rounded-3xl mb-16 drop-shadow-lg">
 			<div class="p-8">
-				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus for alle Odense studerende</p>
+				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus for alle Odenses studerende</p>
 				<div class="lg:grid grid-cols-2 gap-10">
 					<div class="">
-						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har  mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille  brætspil med dine venner, afholde møder eller gå i byen.</p>
+						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille brætspil med dine venner, afholde møder, gå i byen eller komme til en af vores events.</p>
 						<Button title="SE EVENTS" href="/events"></Button>
 					</div>
 					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
@@ -68,7 +70,7 @@ import Employees from "../components/Employees.astro";
 						<img class="w-full h-full object-cover" src="indeximg2.webp" alt="">
 					</div>
 					<div class="">
-						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har  mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille  brætspil med dine venner, afholde møder eller gå i byen.</p>
+						<p class="text-mb-body lg:text-body font-body pb-8">Studenterhus Odense er baseret på frivillighed. Det er vores seje frivillige, som driver huset i fællesskab med de ansatte, så du får en god oplevelse, når du besøger os under et arrangement.</p>
 						<Button title="BLIV FRIVILLIG" href="/events"></Button>
 					</div>
 				</div>
