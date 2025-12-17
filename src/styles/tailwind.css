@@ -24,6 +24,9 @@
   --text-subheader2: 32px;
   --text-form: 64px;
   --text-footer: 20px;
+  --text-card: 20px;
+  --text-card2: 24px;
+  --text-button: 16px;
 
   /*MOBILE FONT SIZES*/
 
@@ -32,6 +35,8 @@
   --text-mb-subheader1: 24px;
   --text-mb-subheader2: 24px;
   --text-mb-form: 40px;
+  --text-mb-button: 12px;
+  --text-mb-card2: 16px;
 
   /*LINE HEIGHTS*/
   --leading-form: 0.8;

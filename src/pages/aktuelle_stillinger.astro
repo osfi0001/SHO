@@ -18,6 +18,8 @@ import Sticker from "../components/Sticker.astro";
           </div>
     </div>
     
+ <img class="absolute hidden lg:block right-20 top-50 sketch" src="/pencil-sketch.svg" alt="sketch">
+
     <div class="flex flex-col lg:flex-row items-center justify-center m-auto space-y-4 lg:space-y-0 lg:space-x-4">
         <div class="card w-96 shadow-lg bg-cover bg-[url('/BG15.png')]">
             <div class="card-body">
@@ -49,3 +51,19 @@ import Sticker from "../components/Sticker.astro";
     </div>
 </div>
 </SubLayout>
+
+
+<script>
+        window.addEventListener("scroll", parallaxScroll);
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.25;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+</script>

@@ -27,7 +27,8 @@ import Sticker from "../components/Sticker.astro";
 
 <div>
     <div class="flex flex-wrap justify-center mx-10 gap-5 my-8">
-    <div>
+    <img class="absolute hidden lg:block right-50 top-360 sketch" src="/book-sketch.svg" alt="sketch">
+        <div>
 
         <VolunteerCard
         header="Vi Søger"
@@ -71,3 +72,19 @@ import Sticker from "../components/Sticker.astro";
     </div>
 </div>
 </SubLayout>
+
+
+<script>
+        window.addEventListener("scroll", parallaxScroll);
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.25;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+</script>

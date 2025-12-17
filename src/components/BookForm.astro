@@ -7,8 +7,8 @@ import Button from '../components/Button.astro';
     <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
 
       <!-- Header Section -->
-      <div class="bg-[url(public/BG28.png)] bg-cover bg-center rounded-xl">
-        <div class="px-6 py-6 md:py-20">
+      <div class="bg-[url(public/BG28.png)] bg-fit bg-center rounded-xl">
+        <div class="px-6 py-20">
           <h1 class="body text-mb-form md:text-form leading-form font-bold">BOOK LOKALE</h1>
         </div>
       </div>
@@ -26,7 +26,7 @@ import Button from '../components/Button.astro';
           <form class="flex flex-col gap-4">
             <!-- Name + Phone -->
             <div class="md:flex gap-4">
-              <div class="w-full">
+              <div  class="w-full pb-4 md:pb-0">
                 <label for="first_name" class="block text-body font-body">
                   Dit Fulde Navn
                   <span class="bg-[url(/BG28.png)] object-cover bg-center bg-clip-text text-transparent">*</span>
@@ -48,7 +48,7 @@ import Button from '../components/Button.astro';
 
             <!-- Email + Organisation -->
             <div class="md:flex gap-4">
-              <div class="w-full">
+              <div class="w-full pb-4 md:pb-0">
                 <label for="email" class="block text-body font-body">
                   Din E-Mail Adresse
                   <span class="bg-[url(/BG28.png)] object-cover bg-center  bg-clip-text text-transparent">*</span>
@@ -99,7 +99,7 @@ import Button from '../components/Button.astro';
 
             <!-- Deltagere + Dato -->
             <div class="md:flex gap-4">
-              <div class="w-full">
+              <div class="w-full pb-4 md:pb-0">
                 <label for="deltagere" class="block text-body font-body">
                   Antal Deltagere
                   <span class="bg-[url(/BG28.png)] object-cover bg-center bg-clip-text text-transparent">*</span>
@@ -122,7 +122,7 @@ import Button from '../components/Button.astro';
             
             <!-- Start + Slut -->
             <div class="md:flex gap-4">
-              <div class="w-full">
+              <div class="w-full pb-4 md:pb-0">
                 <label for="start" class="block text-body font-body">
 Start Tidspunkt                  <span class="bg-[url(/BG28.png)] object-cover bg-center bg-clip-text text-transparent">*</span>
                 </label>
